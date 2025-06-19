@@ -1,2 +1,2 @@
-# Agrinho-Nossa_Feira_Online
-Protótipo de uma feira online. 
+# Agrinho_Feira
+Protótipo de uma feira virtual.

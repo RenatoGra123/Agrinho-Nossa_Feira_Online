@@ -1,0 +1,524 @@
+styles.css
+
+/* VARIÁVEIS */
+:root {
+    --cor-background: #F9F9F7;
+    --cor-texto: #333;
+    --cor-texto-destaque: #2E7D32;
+    --cor-secundaria: #FF9800;
+    --cor-subtitulo: #666;
+}
+
+
+/* RESET E ESILOS BASE */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #F9F9F7;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* LINKS E BOTÕES */
+a:link, 
+a:active, 
+a:visited { /* Todas pseudoclasses, exceto hover (indicador visual) */
+    text-decoration: none;
+    color: #333;
+}
+
+a.page {
+    color: #2E7D32;
+    font-weight: 700;
+}
+
+p a.page:hover {
+    color:#FF9800;
+}
+a:hover {
+    color: #2E7D32;
+}
+
+.btn {
+    display: inline-block;
+    border: 2px solid #2E7D32;
+    padding: 0.8rem 1.8rem;
+    background-color: #FF9800;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.5s ease; /* Transição para o efeito hover */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+a.btn {
+    color: #333; /* texto dentro de todos botões */
+}
+
+.btn.menor {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+.btn:hover {
+    background-color: #2E7D32;
+    transform: translateY(-3px); /* movimentar-se 3 pixels para esquerda no hover */
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}
+
+/* HEADER e NAV */
+header {
+    display: flex;
+    justify-content: space-between; /* adiciona qnt igual de espaço entre elementos */
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky; /* sempre exposto, independente da posição na página */
+    top: 0;
+    z-index: 100; /* sempre pra frente (certifica que os links são acessáveis) */
+}
+
+a.link-inicio {
+    color:#2E7D32;
+}
+
+header h2 {
+    color: #2E7D32;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+ul { /* itens da navegação entre páginas */
+    display: flex;
+    list-style-type: none;
+    gap: 2rem;
+}
+
+ul li {
+    font-weight: 500;
+}
+
+/* SEÇÃO PRINCIPAL */
+.inicio {
+    background-image: linear-gradient(135deg, #317B22, #87E752);
+    color: white;
+    padding: 6rem 5%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.inicio h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.inicio h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+/* SEÇÕES (Reutilizado em todas as páginas) */
+section {
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #2E7D32;
+}
+
+.subtitulo { /* texto diretamente abaixo do título secundário -> mais informações */
+    color: #666;
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* Cards e produtos */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    width: 250px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.imagem-produto {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.preco {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2E7D32;
+    margin: 0.5rem 0;
+}
+
+/* cards dos produtores */
+.produtor {
+    width: 280px;
+    padding: 2rem 1.5rem;
+}
+
+.imagem-produtor {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #FF9800;
+    margin-bottom: 1rem;
+}
+
+.localizacao {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.descricao {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+/* explicação passo-a-passo ("Como Funciona) */
+.passos {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+.passo {
+    flex: 1;
+    min-width: 200px;
+    padding: 1.5rem;
+    position: relative;
+}
+
+.passo-numero {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FF9800;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.passo img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+/* Estilos das categorias (verduras, frutas, legumes e outros) */
+.categoria {
+    text-align: center;
+    padding: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.categoria-imagem {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+/* PÁGINAS COM OS PRODUTOS À VENDA */
+/* arrumar: título sobrepõe link quando visto na versão do celular (na vertical) */
+.produtos-titulo {
+    position: sticky;
+    top: 0;
+    z-index: 90;
+    background: rgba(249, 249, 247, 0.98);
+    padding: 1.5rem 5%;
+    margin-bottom: 1rem;
+    width: 100%;
+    backdrop-filter: blur(5px); 
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.voltar-container {
+    align-self: flex-start;
+}
+
+.titulo-container {
+    text-align: center;
+    width: fit-content;
+    margin-top: -3rem;
+}
+
+.produtos {
+    padding-top: 0;
+    margin-top: -1rem; 
+}
+
+/* RODAPÉ */
+footer {
+    background-color: #2E7D32;
+    color: white;
+    padding: 3rem 5% 1rem;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+
+.footer-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: #FF9800;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.footer-section p {
+    color: #E0E0E0;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.footer-section li {
+    transition: transform 0.2s ease;
+}
+
+.footer-section li:hover {
+    transform: translateX(5px);
+}
+
+.footer-section a:link,
+.footer-section a:visited,
+.footer-section a:active {
+    color: #F9F9F7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+}
+
+.footer-section a:hover {
+    color: #FF9800;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+.footer-bottom p {
+    margin: 0.5rem 0;
+    color: #BDBDBD;
+    line-height: 1.6;
+}
+
+.footer-bottom strong {
+    color: white;
+    font-weight: 600;
+}
+
+/*  INDEX.HTML */
+
+#index, #produtores {
+    .promocoes,
+    .produtores-do-mes,
+    .produtores {
+
+        .card:hover {
+             transform: translateX(0);
+             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+}
+    .btn {
+        margin-top: 3rem;
+    }
+}
+}
+
+/*  === RESPONSIVIDADE === */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .inicio h1 {
+        font-size: 2.2rem;
+    }
+    
+    .inicio h3 {
+        font-size: 1.2rem;
+    }
+    
+    section {
+        padding: 3rem 1rem;
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .steps {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .step {
+        margin-bottom: 2rem;
+    }
+
+    /* rodapé */
+    footer {
+        padding: 2rem 5% 1rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .footer-section {
+        padding: 0;
+    }
+    
+    .footer-section h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+}
+
+
+/* Tabela na página "suporte" */
+table {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #2E7D32;
+    color: white;
+}
+
+th {
+    padding: 1rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+tbody tr {
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+tbody tr:hover {
+    background-color: #f5f5f5;
+    transform: scale(1.01);
+}
+
+tbody th {
+    font-weight: 400;
+    padding: 0.8rem;
+    color: #333;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+@media (max-width: 768px) {
+    table {
+        width: 95%;
+        display: block;
+        overflow-x: auto;
+    }
+    
+    th {
+        padding: 0.8rem 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    tbody th {
+        padding: 0.6rem 0.5rem;
+        font-size: 0.85rem;
+    }
+}
