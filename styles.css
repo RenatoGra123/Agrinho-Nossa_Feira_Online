@@ -1,5 +1,3 @@
-styles.css
-
 /* VARIÁVEIS */
 :root {
     --cor-background: #F9F9F7;
@@ -7,6 +5,9 @@ styles.css
     --cor-texto-destaque: #2E7D32;
     --cor-secundaria: #FF9800;
     --cor-subtitulo: #666;
+    --cor-branco: #fff;
+    --cor-rodape-texto: #E0E0E0;
+    --cor-sombra: rgba(0,0,0,0.1);
 }
 
 
@@ -21,8 +22,8 @@ styles.css
 body {
     display: flex;
     flex-direction: column;
-    background-color: #F9F9F7;
-    color: #333;
+    background-color: var(--cor-background);
+    color: var(--cor-texto);
     line-height: 1.6;
     min-height: 100vh;
 }
@@ -30,45 +31,45 @@ body {
 /* LINKS E BOTÕES */
 a:link, 
 a:active, 
-a:visited { /* Todas pseudoclasses, exceto hover (indicador visual) */
+a:visited {
     text-decoration: none;
-    color: #333;
+    color: var(--cor-texto);
 }
 
 a.page{
-    color: #2E7D32;
+    color: var(--cor-texto-destaque);
     font-weight: 700;
 }
 
 a.footer:link, a.footer:active, a.footer:visited {
-    color: #f5f5f5
+    color: #f5f5f5;
 }  
 
 a.footer:hover {
-    color: #FF9800;
+    color: var(--cor-secundaria);
 }
 
 p a.page:hover{
-    color:#FF9800;
+    color: var(--cor-secundaria);
 }
 a:hover {
-    color: #2E7D32;
+    color: var(--cor-texto-destaque);
 }
 
 .btn {
     display: inline-block;
-    border: 2px solid #2E7D32;
+    border: 2px solid var(--cor-texto-destaque);
     padding: 0.8rem 1.8rem;
-    background-color: #FF9800;
+    background-color: var(--cor-secundaria);
     border-radius: 50px;
     font-weight: 600;
-    transition: all 0.5s ease; /* Transição para o efeito hover */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.5s ease;
+    box-shadow: 0 4px 6px var(--cor-sombra);
     text-align: center;
 }
 
 a.btn {
-    color: #333; /* texto dentro de todos botões */
+    color: var(--cor-texto);
 }
 
 .btn.menor {
@@ -78,35 +79,35 @@ a.btn {
 }
 
 .btn:hover {
-    background-color: #2E7D32;
-    transform: translateY(-3px); /* movimentar-se 3 pixels para esquerda no hover */
+    background-color: var(--cor-texto-destaque);
+    transform: translateY(-3px);
     box-shadow: 0 6px 8px rgba(0,0,0,0.15);
 }
 
 /* HEADER e NAV */
 header {
     display: flex;
-    justify-content: space-between; /* adiciona qnt igual de espaço entre elementos */
+    justify-content: space-between;
     align-items: center;
     padding: 1.5rem 5%;
-    background-color: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky; /* sempre exposto, independente da posição na página */
+    background-color: var(--cor-branco);
+    box-shadow: 0 2px 10px var(--cor-sombra);
+    position: sticky;
     top: 0;
-    z-index: 100; /* sempre pra frente (certifica que os links são acessáveis) */
+    z-index: 100;
 }
 
 a.link-inicio {
-    color:#2E7D32;
+    color: var(--cor-texto-destaque);
 }
 
 header h2 {
-    color: #2E7D32;
+    color: var(--cor-texto-destaque);
     font-size: 1.8rem;
     font-weight: 700;
 }
 
-ul { /* itens da navegação entre páginas */
+ul {
     display: flex;
     list-style-type: none;
     gap: 2rem;
@@ -119,7 +120,7 @@ ul li {
 /* SEÇÃO PRINCIPAL */
 .inicio {
     background-image: linear-gradient(135deg, #317B22, #87E752);
-    color: white;
+    color: var(--cor-branco);
     padding: 6rem 5%;
     text-align: center;
     position: relative;
@@ -138,7 +139,7 @@ ul li {
     margin-bottom: 2rem;
 }
 
-/* SEÇÕES (Reutilizado em todas as páginas) */
+/* SEÇÕES */
 section {
     padding: 4rem 5%;
     text-align: center;
@@ -147,11 +148,11 @@ section {
 section h2 {
     font-size: 2.2rem;
     margin-bottom: 1rem;
-    color: #2E7D32;
+    color: var(--cor-texto-destaque);
 }
 
-.subtitulo { /* texto diretamente abaixo do título secundário -> mais informações */
-    color: #666;
+.subtitulo {
+    color: var(--cor-subtitulo);
     margin-bottom: 2.5rem;
     font-size: 1.1rem;
     margin-bottom: 1rem;
@@ -167,9 +168,9 @@ section h2 {
 }
 
 .card {
-    background-color: white;
+    background-color: var(--cor-branco);
     border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px var(--cor-sombra);
     padding: 1.5rem;
     width: 250px;
     transition: all 0.3s ease;
@@ -193,7 +194,7 @@ section h2 {
 .preco {
     font-size: 1.2rem;
     font-weight: 600;
-    color: #2E7D32;
+    color: var(--cor-texto-destaque);
     margin: 0.5rem 0;
 }
 
@@ -208,12 +209,12 @@ section h2 {
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #FF9800;
+    border: 3px solid var(--cor-secundaria);
     margin-bottom: 1rem;
 }
 
 .localizacao {
-    color: #666;
+    color: var(--cor-subtitulo);
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
 }
@@ -224,7 +225,7 @@ section h2 {
     color: #555;
 }
 
-/* explicação passo-a-passo ("Como Funciona) */
+/* explicação passo-a-passo */
 .passos {
     display: flex;
     justify-content: space-between;
@@ -246,8 +247,8 @@ section h2 {
     top: -15px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #FF9800;
-    color: white;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branco);
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -263,7 +264,7 @@ section h2 {
     margin-bottom: 1rem;
 }
 
-/* Estilos das categorias (verduras, frutas, legumes e outros) */
+/* Estilos das categorias */
 .categoria {
     text-align: center;
     padding: 1.5rem;
@@ -278,7 +279,6 @@ section h2 {
 }
 
 /* PÁGINAS COM OS PRODUTOS À VENDA */
-/* arrumar: título sobrepõe link quando visto na versão do celular (na vertical) */
 .produtos-titulo {
     position: sticky;
     top: 0;
@@ -311,8 +311,8 @@ section h2 {
 
 /* RODAPÉ */
 footer {
-    background-color: #2E7D32;
-    color: white;
+    background-color: var(--cor-texto-destaque);
+    color: var(--cor-branco);
     padding: 3rem 5% 1rem;
     margin-top: auto;
 }
@@ -336,14 +336,14 @@ footer {
 .footer-section h3 {
     font-size: 1.3rem;
     margin-bottom: 1.5rem;
-    color: #FF9800;
+    color: var(--cor-secundaria);
     font-weight: 600;
     position: relative;
     padding-bottom: 0.5rem;
 }
 
 .footer-section p {
-    color: #E0E0E0;
+    color: var(--cor-rodape-texto);
     line-height: 1.6;
     margin-bottom: 1rem;
 }
@@ -367,14 +367,14 @@ footer {
 .footer-section a:link,
 .footer-section a:visited,
 .footer-section a:active {
-    color: #F9F9F7;
+    color: var(--cor-background);
     text-decoration: none;
     transition: color 0.3s ease;
     display: block;
 }
 
 .footer-section a:hover {
-    color: #FF9800;
+    color: var(--cor-secundaria);
 }
 
 .footer-bottom {
@@ -392,7 +392,7 @@ footer {
 }
 
 .footer-bottom strong {
-    color: white;
+    color: var(--cor-branco);
     font-weight: 600;
 }
 
@@ -405,15 +405,13 @@ footer {
 
         .card:hover {
              transform: translateX(0);
-             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-
-}
+             box-shadow: 0 5px 15px var(--cor-sombra);
+        }
+    }
     .btn {
         margin-top: 3rem;
     }
 }
-}
-
 
 /* Tabela na página "suporte" */
 table {
@@ -421,14 +419,14 @@ table {
     max-width: 1000px;
     margin: 2rem auto;
     border-collapse: collapse;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px var(--cor-sombra);
     border-radius: 10px;
     overflow: hidden;
 }
 
 thead {
-    background-color: #2E7D32;
-    color: white;
+    background-color: var(--cor-texto-destaque);
+    color: var(--cor-branco);
 }
 
 th {
@@ -438,7 +436,7 @@ th {
 }
 
 tbody tr {
-    background-color: white;
+    background-color: var(--cor-branco);
     transition: all 0.3s ease;
 }
 
@@ -450,10 +448,9 @@ tbody tr:hover {
 tbody th {
     font-weight: 400;
     padding: 0.8rem;
-    color: #333;
+    color: var(--cor-texto);
     border-bottom: 1px solid #e0e0e0;
 }
-
 
 /*  === RESPONSIVIDADE === */
 @media (max-width: 768px) {
@@ -513,7 +510,6 @@ tbody th {
         left: 50%;
         transform: translateX(-50%);
     }
-
 
     table {
         width: 95%;
