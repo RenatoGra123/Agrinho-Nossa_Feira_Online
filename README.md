@@ -1,20 +1,54 @@
-# Projeto Agrinho - Nossa Feira Online
+ Projeto Agrinho - Nossa Feira Online
 
-Esse projeto é um protótipo de uma feira online. O intuito dela é conectar consumidores e produtores. A interface da página visa uma abordagem intuitiva e minimalista. Sua estrutura encontra-se abaixo:
+🌱 Protótipo estático de plataforma e-commerce para conectar produtores rurais da região de Maringá aos consumidores.
 
+## Estrutura do Projeto
 ├── imagens/ <br>
 ├── subpaginas/ <br>
-│   ├── produtos/ <br>
-│   │   ├── frutas.html <br>
-│   │   ├── legumes.html <br>
-│   │   ├── outros.html <br>
-│   │   └── verduras.html <br>
-│   ├── produtores.html <br>
-│   ├── produtos.html <br>
-│   └── suporte.html <br>
-├── index.html <br> 
-└── styles.css <br>
+│ ├── produtos/ <br>
+│ │ ├── frutas.html <br>
+│ │ ├── legumes.html <br>
+│ │ ├── outros.html <br>
+│ │ └── verduras.html <br>
+│ ├── produtores.html <br>
+│ ├── produtos.html <br>
+│ └── suporte.html <br>
+├── index.html <br>
+└── styles.css
 
-## Funcionalidades
+## Características Principais
+- Navegação fixa entre páginas principais
+- Catálogo organizado por categorias (frutas, legumes, verduras, outros)
+- Perfis de produtores locais
+- Seção de promoções destacadas
 
-O projeto conta com uma página inicial que mostra algumas promoções semanais e os produtores em destaque da semana. 
+## Limitações Técnicas (Conforme Edital)
+⚠️ **Protótipo Estático** - Este projeto foi desenvolvido exclusivamente com HTML e CSS:
+
+1. **Sem funcionalidade de compras**:
+   - Botões "Adicionar" são apenas elementos visuais
+   - Não há carrinho de compras implementado
+
+2. **Sem sistemas de autenticação**:
+   - Não inclui formulários de login/cadastro (usuário, senha, etc)
+   - Campos de input não foram implementados por não terem utilidade prática sem JavaScript
+
+3. **Interatividade limitada**:
+   - Todas as interações são simuladas visualmente
+   - A navegação ocorre apenas entre páginas HTML estáticas
+
+*Observação: Essas funcionalidades poderiam ser implementadas futuramente com JavaScript, mas foram deliberadamente omitidas para atender aos requisitos do concurso.*
+
+## Tecnologias Utilizadas
+- HTML5 semântico
+- CSS puro (sem frameworks)
+- Ícones SVG
+- Imagens geradas por IA (DALL·E, DeepSeek AI, Gemini Imagen 2)
+- Background removido via Remove.bg
+
+## Dados Fictícios
+- Projeto desenvolvido para fins educacionais no concurso Agrinho
+- Todos os dados (produtos, preços, produtores) são simulados
+- Imagens de produtos/produtores criadas com IA conforme termos das plataformas
+
+Desenvolvido por [Renato Granemann de Souza] | © 2025 Nossa Feira Online
