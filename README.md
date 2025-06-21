@@ -51,4 +51,8 @@
 - Todos os dados (produtos, preços, produtores) são simulados
 - Imagens de produtos/produtores criadas com IA conforme termos das plataformas
 
+## Elementos visuais
+- Todos os elementos visuais gerados com CSS, bem como os ícones SVG, foram criados pelo desenvolvedor da página
+- Apenas as imagens, dos produtores, produtos e categorias, foram criadas com IA
+
 Desenvolvido por [Renato Granemann de Souza] | © 2025 Nossa Feira Online
