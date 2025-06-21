@@ -52,7 +52,8 @@
 - Imagens de produtos/produtores criadas com IA conforme termos das plataformas
 
 ## Elementos visuais
-- Todos os elementos visuais gerados com CSS, bem como os ícones SVG, foram criados pelo desenvolvedor da página
-- Apenas as imagens, dos produtores, produtos e categorias, foram criadas com IA
+- Todos os elementos visuais gerados com CSS foram criados pelo desenvolvedor da página
+- Os ícones foram criados à mão pelo autor da página, mas transformados em arquivo SVG com o uso de IA
+- As imagens (dos produtores, produtos e categorias) foram criadas com IA
 
 Desenvolvido por [Renato Granemann de Souza] | © 2025 Nossa Feira Online
